@@ -35,7 +35,10 @@ public class NewNameMainController {
     try {
 
       System.out.println("Hello, world");
-      String newResult = domainTestService.testDomain(request.domainName + ".eu");
+      String newResult = 
+        domainTestService.testDomain(
+            request.domainName + ".eu"
+          );
 
 
       return new ResponseEntity<>(result, HttpStatus.OK);
