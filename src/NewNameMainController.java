@@ -22,10 +22,19 @@ public class NewNameMainController {
 
   @RequestMapping(method=RequestMethod.POST, value="/test-domain", consumes="application/json")
   public ResponseEntity<String> testDomainNewName(@RequestBody DomainTestRequest request) {
-    log.info("Testing domain " + request.domainName);
+    System.out.println("Hello, world");
+    System.out.println("Hello, world");
+    System.out.println("Hello, world");
+    System.out.println("Hello, world");
+    System.out.println("Hello, world");
+    //Hello World
+    /*
+     * This is a longer
+     * multiline commment
+     */
     try {
 
-
+      System.out.println("Hello, world");
       String result = domainTestService.testDomain(request.domainName);
 
 
@@ -37,6 +46,7 @@ public class NewNameMainController {
     } catch(Exception e) {
       return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
+    log.info("Testing domain " + request.domainName);
   }
 
   @RequestMapping(method=RequestMethod.POST, value="/test-website", consumes="application/json")
